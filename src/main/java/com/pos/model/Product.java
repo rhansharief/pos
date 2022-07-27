@@ -7,6 +7,7 @@ import javax.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Indexed;
 
 @Entity
 @Data
@@ -25,6 +26,10 @@ public class Product {
     @JoinColumn(name="SUPPLIER_ID", nullable=false)
     private Supplier supplier;
 
+    @Column
+    private String genericName;
+
+    @Column
     private String brand;
 
     @Column(nullable = false)
