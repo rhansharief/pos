@@ -1,7 +1,0 @@
-package com.pos.repository;
-
-import com.pos.model.Brand;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface BrandRepository extends JpaRepository<Brand, Long> {
-}

@@ -22,8 +22,10 @@ public class Product {
     private Category category;
 
     @ManyToOne
-    @JoinColumn(name="BRAND_ID", nullable=false)
-    private Brand brand;
+    @JoinColumn(name="SUPPLIER_ID", nullable=false)
+    private Supplier supplier;
+
+    private String brand;
 
     @Column(nullable = false)
     private String name;

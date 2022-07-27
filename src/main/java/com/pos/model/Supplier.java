@@ -10,14 +10,14 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode
-public class Brand {
+public class Supplier {
     @Id
     @GeneratedValue
     private Long id;
 
-    @Column
+    @Column //TODO: Index?
     private String name;
 
-    @OneToMany(mappedBy="brand")
+    @OneToMany(mappedBy="supplier", fetch = FetchType.LAZY)
     Collection<Product> products;
 }
